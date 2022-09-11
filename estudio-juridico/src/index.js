@@ -14,6 +14,7 @@ root.render(
     <Route path='/' element={<Layout/>}>
       <Route index element={<Home/>}/>
       <Route path='/users' element={<Users/>}>
+        <Route index element={<div>Select user</div>}/>
         <Route path=':userId' element={<User/>}/>
       </Route>
       <Route path='/about' element={<About/>}/>

@@ -13,6 +13,10 @@ const User = () => {
         navigate("/users", {replace: true})
     }
 
+    if(!user) {
+        return <div>That user doesn't exists.</div>
+    }
+
     return(
         <div>
             <h2>{user.name}</h2>
@@ -23,7 +27,7 @@ const User = () => {
                 <strong>Email: </strong>{user.email}
             </div>
             <br/>
-            <button onClick={handleDelete}>Eliminar</button>
+            <button onClick={handleDelete}>Delete</button>
         </div>
     )
 }
