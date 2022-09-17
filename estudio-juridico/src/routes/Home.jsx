@@ -4,12 +4,14 @@ import styles from "../styles/home.module.css";
 
 const Home = () => {
     return(
-        <div className="home__container" style={styles.Home}>
+        <div className={styles.home__container}>
+            <div>
                 <a className="link" href="/">
-                    <img className="logo-image" src="../../images/logoPequenio.png" alt="Estudio Jurídico Barreiro & Asociados" />
+                    <img className="logo-image" src="../../images/logoPequenioTransparente.png" alt="Estudio Jurídico Barreiro & Asociados" />
                 </a>
                 <h1>Estudio Jurídico Barreiro & Asociados</h1>
-            <div className="info__container">
+            </div>
+            <div className={styles.info__container}>
                 <div>
                     <FaMapMarkerAlt/>
                     <strong>Calle 12 N° 779 3° C - La Plata</strong>
