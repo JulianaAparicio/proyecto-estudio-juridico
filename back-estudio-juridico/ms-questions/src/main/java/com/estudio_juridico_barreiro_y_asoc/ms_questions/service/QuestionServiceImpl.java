@@ -5,6 +5,8 @@ import com.estudio_juridico_barreiro_y_asoc.ms_questions.repository.QuestionRepo
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class QuestionServiceImpl implements QuestionService{
 
@@ -15,4 +17,10 @@ public class QuestionServiceImpl implements QuestionService{
     public Question saveQuestion(Question question) {
         return questionRepository.save(question);
     }
+
+    @Override
+    public List<Question> getAllQuestions() {
+        return questionRepository.findAll();
+    }
+
 }
