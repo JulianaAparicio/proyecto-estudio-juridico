@@ -6,7 +6,7 @@ import org.apache.coyote.BadRequestException;
 import java.util.List;
 
 public interface QuestionService {
-    public Question saveQuestion(Question question) throws BadRequestException;
+    public void saveQuestion(Question question) throws BadRequestException;
 
     public List<Question> getAllQuestions();
 
