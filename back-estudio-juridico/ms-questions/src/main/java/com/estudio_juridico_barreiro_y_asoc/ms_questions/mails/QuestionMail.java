@@ -31,7 +31,7 @@ public class QuestionMail {
         Session session = Session.getInstance(props, auth);
         String registerSubjectMail = question.getFullName() + " " + "ha enviado una consulta a su sitio web!";
         String registerBodyMail = "<div style=\"width: 90%;border: 1px solid #383b58; margin: auto;\">\n" +
-                "      <div style=\"width: 100%;background-color: #1DBEB4;color:#383b58;\">\n" +
+                "      <div style=\"width: 100%;background-color: #592A29;color:#F9F6F3;\">\n" +
                 "         <h1 style=\"padding: 0.5rem;\">Estudio Jurídico Barreiro & Asociados</h1>\n" +
                 "         <h3 style=\"padding: 0.5rem;\">Se ha recibido una consulta a través de su sitio web.</h3> \n" +
                 "      </div>\n" +
@@ -43,7 +43,9 @@ public class QuestionMail {
                 "\n" +
                 "         Teléfono de contacto que ingresó: " + question.getPhoneNumber() + "<br><br><br>\n" +
                 "\n" +
-                "         Su consulta fue: " + question.getMessage() + "<br><br>\n" +
+                "         Su consulta fue: " + "<br><br>\n" +
+                "\n" +
+                        question.getMessage() + "<br><br><br>\n" +
                 "\n" +
                 "         Este email fue enviado de forma automática a través del formulario de contacto de su sitio web.\n" +
                 "\n" +
