@@ -7,24 +7,27 @@ import org.apache.coyote.BadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.logging.Logger;
 
 @Service
 public class QuestionServiceImpl implements QuestionService{
+
+    private final Logger logger = Logger.getLogger("QuestionService");
 
     @Autowired
     private QuestionRepository questionRepository;
 
     @Override
-    public Question saveQuestion(Question question) throws BadRequestException {
+    public void saveQuestion(Question question) throws BadRequestException {
         if (question.getFullName()==null || question.getEmail()==null || question.getPhoneNumber()==null || question.getMessage()==null){
-            //logger.error("The data entered has null values.");
+            logger.warning("The data entered has null values.");
             throw new BadRequestException("The question has null values.");
         } else {
-            //logger.debug("Creating new question...");
-            //logger.debug("Sending email with the new question...");
+            logger.info("Creating new question...");
+            logger.info("Sending email with the new question...");
             QuestionMail.sendQuestionEmail(question);
-            return questionRepository.save(question);
-            //logger.info("The question was created successfully.");
+            logger.info("The question was created successfully.");
+            questionRepository.save(question);
         }
     }
 
