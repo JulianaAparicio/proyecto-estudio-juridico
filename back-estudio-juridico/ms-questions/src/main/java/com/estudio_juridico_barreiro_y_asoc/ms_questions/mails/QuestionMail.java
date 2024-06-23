@@ -11,8 +11,8 @@ import java.util.Properties;
 
 public class QuestionMail {
     public static void sendQuestionEmail (Question question) {
-        final String fromEmail = "consultas.estudiobarreiroyasoc@gmail.com"; //requires valid gmail id
-        final String password = "Barreiroyasoc2024"; // correct password for gmail id
+        final String fromEmail = "consultas.estudiobarreiro@gmail.com"; //requires valid gmail id
+        final String password = "trsv ozje hndh ajku"; // correct password for gmail id
 
         System.out.println("TLSEmail Start");
         Properties props = new Properties();
