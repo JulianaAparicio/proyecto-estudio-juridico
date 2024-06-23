@@ -2,17 +2,17 @@ package com.estudio_juridico_barreiro_y_asoc.ms_questions.mails;
 
 import com.estudio_juridico_barreiro_y_asoc.ms_questions.config.MailConfig;
 import com.estudio_juridico_barreiro_y_asoc.ms_questions.model.Question;
+import jakarta.mail.Authenticator;
+import jakarta.mail.PasswordAuthentication;
+import jakarta.mail.Session;
 
-import javax.mail.Authenticator;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
 import java.util.Properties;
 
 
 public class QuestionMail {
     public static void sendQuestionEmail (Question question) {
         final String fromEmail = "consultas.estudiobarreiroyasoc@gmail.com"; //requires valid gmail id
-        final String password = "Estudiobarreiroyasoc2024"; // correct password for gmail id
+        final String password = "Barreiroyasoc2024"; // correct password for gmail id
 
         System.out.println("TLSEmail Start");
         Properties props = new Properties();
