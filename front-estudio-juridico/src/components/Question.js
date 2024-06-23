@@ -7,7 +7,9 @@ import { useState } from 'react';
 
 
 export default function Question() {
-  const date = new Date().getDate()
+  let today = new Date();
+  let date=today.getDate() + "-"+ parseInt(today.getMonth()+1) +"-"+today.getFullYear();
+
   const [fullName, setFullName]=useState('')
   const [email, setEmail]=useState('')
   const [phoneNumber, setPhoneNumber]=useState('')
